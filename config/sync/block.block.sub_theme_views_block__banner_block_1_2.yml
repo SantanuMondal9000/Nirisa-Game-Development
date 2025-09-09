@@ -1,6 +1,6 @@
-uuid: 6942eb5b-b289-4c36-b573-355e3d4b1e06
+uuid: 4ab0792a-9ac6-4fb3-b6c5-f3d50f0aee15
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.banner
@@ -9,10 +9,10 @@ dependencies:
     - views
   theme:
     - sub_theme
-id: sub_theme_views_block__banner_block_1
+id: sub_theme_views_block__banner_block_1_2
 theme: sub_theme
 region: content
-weight: -1
+weight: 0
 provider: null
 plugin: 'views_block:banner-block_1'
 settings:
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /node/4
+    pages: /home
