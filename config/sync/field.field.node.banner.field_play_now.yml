@@ -1,0 +1,23 @@
+uuid: bbce6bba-a6a8-4f80-8f51-8eb3e6f3c060
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_play_now
+    - node.type.banner
+  module:
+    - link
+id: node.banner.field_play_now
+field_name: field_play_now
+entity_type: node
+bundle: banner
+label: 'Play Now'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link
