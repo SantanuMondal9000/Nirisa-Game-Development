@@ -1,0 +1,39 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * @file
+ * Functions to support theming in the Sub Theme theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function sub_theme_preprocess_html(array &$variables): void {
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page.html.twig.
+ */
+function sub_theme_preprocess_page(array &$variables): void {
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for node.html.twig.
+ */
+function sub_theme_preprocess_node(array &$variables): void {
+
+}
+
+/**
+ * Implements hook_preprocess_views_view().
+ */
+function sub_theme_preprocess_views_view(&$variables) {
+  if ($variables['view']->id() === 'banner') {
+    $variables['#attached']['library'][] = 'sub_theme/swiper';
+    $variables['#attached']['drupalSettings']['sub_theme']['swiperInit'] = TRUE;
+  }
+}

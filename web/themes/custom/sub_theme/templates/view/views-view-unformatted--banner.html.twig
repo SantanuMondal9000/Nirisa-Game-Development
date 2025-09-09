@@ -1,0 +1,28 @@
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    {% for row in rows %}
+      {% set image_url = row.content['#row']._entity.field_banner_image.entity.uri.value %}
+      {% set title = row.content['#row']._entity.title.value %}
+     {% set description = row.content['#row']._entity.body.processed %}
+     {% set play_now_url = row.content['#row']._entity.field_play_now.uri %}
+      <div class="swiper-slide" style="background-image: url('{{ file_url(image_url) }}');">
+        <div class="slide-content text-left">
+          <h2>{{ title }}</h2>
+          <p>{{ description }}</p>
+          {% if play_now_url %}
+            <a href="{{ play_now_url }}" class="btn btn-primary play-now-btn">
+              {{ play_now_title ? play_now_title : 'Play Now' }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Navigation -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+
+  <!-- Pagination -->
+  <div class="swiper-pagination"></div>
+</div>

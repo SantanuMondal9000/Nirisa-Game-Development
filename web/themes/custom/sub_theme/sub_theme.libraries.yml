@@ -1,0 +1,40 @@
+# Main theme library.
+global:
+  js:
+    js/sub-theme.js: {}
+  css:
+    base:
+      css/base/elements.css: {}
+    component:
+      css/component/block.css: {}
+      css/component/breadcrumb.css: {}
+      css/component/field.css: {}
+      css/component/form.css: {}
+      css/component/header.css: {}
+      css/component/menu.css: {}
+      css/component/messages.css: {}
+      css/component/node.css: {}
+      css/component/sidebar.css: {}
+      css/component/table.css: {}
+      css/component/tabs.css: {}
+      css/component/buttons.css: {}
+    layout:
+      css/layout/layout.css: {}
+    theme:
+      css/theme/print.css: { media: print }
+
+custom-header:
+  css:
+    theme:
+      css/custom-navbar.css: {}
+swiper:
+  css:
+    theme:
+      https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css: {}
+      css/swiper-custom.css: {}
+  js:
+    https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js: {}
+    js/swiper-init.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

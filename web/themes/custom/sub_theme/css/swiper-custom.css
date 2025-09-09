@@ -1,0 +1,144 @@
+/* Full-width, full-height swiper */
+.swiper-container {
+  width: 100%;
+  height: 80vh; /* adjust as needed */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Slides with background cover and flex alignment */
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: transform 0.5s ease;
+}
+
+/* Dark overlay for readability */
+.swiper-slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Text container */
+.slide-content {
+  position: absolute;
+  left: 150px;
+  z-index: 2;
+  color: #fff;
+  padding: 40px;
+  max-width: 500px;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.9s ease;
+}
+
+.slide-content.slide-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide text animation */
+@keyframes slideFadeIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Title styling */
+.slide-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+/* Description styling */
+.slide-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Play Now button */
+.play-now-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(45deg, #ff5722, #ff9800);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.play-now-btn:hover {
+  background: linear-gradient(45deg, #ff784e, #ffb74d);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Pagination dots */
+.swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.6;
+}
+.swiper-pagination-bullet-active {
+  background: #ff9800;
+  opacity: 1;
+}
+
+/* Navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: opacity 0.3s ease;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .slide-content {
+    padding: 20px;
+    max-width: 70%;
+  }
+  .slide-content h2 {
+    font-size: 2rem;
+  }
+  .slide-content p {
+    font-size: 1rem;
+  }
+  .play-now-btn {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .slide-content {
+    max-width: 90%;
+    padding: 15px;
+  }
+  .slide-content h2 {
+    font-size: 1.5rem;
+  }
+  .slide-content p {
+    font-size: 0.9rem;
+  }
+  .play-now-btn {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+}

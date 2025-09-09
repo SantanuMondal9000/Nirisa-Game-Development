@@ -1,0 +1,72 @@
+/* Navbar container */
+.custom-navbar {
+  background-color: #ffffff; /* White background */
+  border-bottom: 2px solid #eaeaea;
+  padding: 0.75rem 0;
+  transition: background-color 0.3s ease;
+}
+
+/* Container inside navbar */
+.custom-navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Branding */
+.custom-navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333333;
+}
+.custom-navbar-brand:hover {
+  color: #ff08f3;
+}
+
+.custom-navbar-menu {
+  justify-content: end;
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3rem;
+  font-size: 1.2rem;
+}
+/* Logo image */
+.custom-navbar-logo {
+  height: 40px;
+  max-height: 40px;
+}
+
+/* Toggler (mobile) */
+.custom-navbar-toggler {
+  border: none;
+}
+
+/* Main menu links */
+.custom-navbar-main-menu .nav-link {
+  padding: 0.5rem 1rem;
+  color: #333333;
+  font-weight: 500;
+}
+.custom-navbar-main-menu .nav-link:hover,
+.custom-navbar-main-menu .nav-link.active {
+  color: #f806f8;
+}
+
+/* Account menu */
+.custom-navbar-account-menu .nav-link {
+  padding: 0.5rem 0.75rem;
+  color: #666666;
+}
+.custom-navbar-account-menu .nav-link:hover {
+  color: #d508f0;
+}
+
+/* Optional: sticky navbar effect */
+.custom-navbar.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+}
