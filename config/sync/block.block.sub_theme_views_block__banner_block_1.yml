@@ -12,7 +12,7 @@ dependencies:
 id: sub_theme_views_block__banner_block_1
 theme: sub_theme
 region: content
-weight: -1
+weight: 1
 provider: null
 plugin: 'views_block:banner-block_1'
 settings:

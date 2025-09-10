@@ -2,6 +2,7 @@
 global:
   js:
     js/sub-theme.js: {}
+    js/about-us.js: {}
   css:
     base:
       css/base/elements.css: {}
