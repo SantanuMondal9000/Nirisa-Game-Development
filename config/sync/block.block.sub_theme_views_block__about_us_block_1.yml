@@ -1,0 +1,24 @@
+uuid: 41bae29a-7e52-4a63-bdde-0f0b4ae7a458
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.about_us
+  module:
+    - views
+  theme:
+    - sub_theme
+id: sub_theme_views_block__about_us_block_1
+theme: sub_theme
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:about_us-block_1'
+settings:
+  id: 'views_block:about_us-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

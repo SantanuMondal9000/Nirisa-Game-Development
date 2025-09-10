@@ -1,0 +1,77 @@
+#block-sub-theme-views-block-about-us-block-1>h2 {
+  display: inline-block;
+  margin: 2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2rem;
+  color: #081344;
+  font-weight: bold;
+  border-bottom: 1px solid #48bbf0;
+  padding: 0.4rem;
+}
+
+.block-views-blockabout-us-block-1 {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.view-content-about-us {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.view-content-about-us .views-row {
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+.view-content-about-us .views-row::after {
+  content: "";
+  position: absolute;
+  inset: 0; 
+  background: #00000066;
+  z-index: 1;
+}
+
+.view-content-about-us .views-field-title {
+  position: absolute;
+  opacity: 1;
+  z-index: 100;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+}
+
+.view-content-about-us .views-field-title a {
+  color: #f5deb3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* child stylings  */
+
+/* Directions for first four rows */
+.view-content-about-us .views-row:nth-child(1) {
+  transform: translateY(60px);
+}
+.view-content-about-us .views-row:nth-child(2) {
+  transform: translateX(-60px);
+}
+.view-content-about-us .views-row:nth-child(3) {
+  transform: translateX(60px);
+}
+.view-content-about-us .views-row:nth-child(4) {
+  transform: translateY(-60px);
+}
+
+/* Visible state */
+.view-content-about-us .views-row.show {
+  opacity: 1;
+  transform: translate(0, 0);
+}
