@@ -1,0 +1,64 @@
+{# themes/custom/your_subtheme/templates/page--404.html.twig #}
+{{ attach_library('sub_theme/error-pages') }}
+
+<!doctype html>
+<html lang="{{ language.getId() }}">
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ 'Page not found'|t }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+  </head>
+  <body class="error-page error-404">
+    <main class="error-wrap" role="main" aria-labelledby="error-heading">
+      <div class="error-content container">
+        <div class="error-visual" aria-hidden="true">
+          <svg class="error-illustration" viewBox="0 0 800 600" role="img" focusable="false">
+            <defs>
+              <linearGradient id="g2" x1="0" x2="1">
+                <stop offset="0" stop-color="#a18cd1"/>
+                <stop offset="1" stop-color="#fbc2eb"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="800" height="600" fill="url(#g2)"/>
+            <g transform="translate(140,110)" fill="#fff" opacity="0.95">
+              <path d="M120 220h360v140H120z"></path>
+              <circle cx="300" cy="90" r="68"></circle>
+            </g>
+          </svg>
+        </div>
+
+        <div class="error-text">
+          <h1 id="error-heading">404 — Page not found</h1>
+          <p class="lead">We can’t find the page you’re looking for. It may have been moved or deleted.</p>
+
+          <div class="error-actions">
+            <a class="btn btn-primary" href="{{ path('<front>') }}" title="{{ 'Go to homepage'|t }}">Back to homepage</a>
+
+            {# A small search form using Drupal's search block render if available #}
+            {% if drupal_search_form is defined %}
+              {{ drupal_search_form }}
+            {% else %}
+              <form class="search-mini" action="{{ path('search.view') }}" method="get" role="search" aria-label="{{ 'Site search'|t }}">
+                <input name="keys" type="search" placeholder="{{ 'Search this site...'|t }}" aria-label="{{ 'Search'|t }}">
+                <button type="submit" class="btn btn-outline-light">{{ 'Search'|t }}</button>
+              </form>
+            {% endif %}
+          </div>
+
+          <div class="error-extra">
+            <p>Try checking the URL for typos or go back to the homepage.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="error-footer" role="contentinfo">
+      <div class="container">
+        <small>&copy; {{ "now"|date("Y") }} {{ site_name }}</small>
+      </div>
+    </footer>
+
+    <js-bottom-placeholder token="{{ placeholder_token }}"></js-bottom-placeholder>
+  </body>
+</html>

@@ -6,11 +6,12 @@
      {% set description = row.content['#row']._entity.body.processed %}
      {% set play_now_url = row.content['#row']._entity.field_play_now.uri %}
       <div class="swiper-slide" style="background-image: url('{{ file_url(image_url) }}');">
+      
         <div class="slide-content text-left">
           <h2>{{ title }}</h2>
           <p>{{ description }}</p>
           {% if play_now_url %}
-            <a href="{{ play_now_url }}" class="btn btn-primary play-now-btn">
+            <a href="{{ play_now_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary play-now-btn">
               {{ play_now_title ? play_now_title : 'Play Now' }}
             </a>
           {% endif %}

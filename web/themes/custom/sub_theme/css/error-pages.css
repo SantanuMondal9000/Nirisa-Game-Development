@@ -1,0 +1,121 @@
+/* themes/custom/your_subtheme/css/error-pages.css */
+
+/* Page basics */
+.error-page {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #222;
+  background: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main wrapper */
+.error-wrap {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 16px;
+}
+
+/* content grid */
+.error-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* Visual left/above block */
+.error-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.error-illustration {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(16,24,40,0.12);
+  transform: translateY(0);
+  transition: transform .6s cubic-bezier(.22,.9,.28,1), box-shadow .3s ease;
+}
+
+/* Text block */
+.error-text {
+  padding: 8px 24px;
+}
+.error-text h1 {
+  font-size: 2.6rem;
+  margin: 0 0 12px;
+  color: #0f172a;
+}
+.error-text .lead {
+  margin: 0 0 20px;
+  font-size: 1.05rem;
+  color: #475569;
+}
+
+/* Actions */
+.error-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.btn-primary {
+  background: linear-gradient(90deg,#4f46e5,#06b6d4);
+  color: #fff;
+  border: none;
+  box-shadow: 0 8px 24px rgba(99,102,241,0.14);
+}
+.btn-secondary {
+  background: #fff;
+  color: #374151;
+  border: 1px solid rgba(15,23,42,0.06);
+}
+
+/* search */
+.search-mini {
+  display: inline-flex;
+  gap: 8px;
+  margin-left: 8px;
+}
+.search-mini input[type="search"]{
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(15,23,42,0.08);
+  min-width: 220px;
+}
+
+/* footer */
+.error-footer {
+  padding: 18px 16px;
+  text-align: center;
+  background: transparent;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .error-content { grid-template-columns: 1fr; text-align: center; gap: 24px; }
+  .error-text { padding: 0 8px; }
+  .search-mini input[type="search"]{ min-width: 150px; }
+  .error-illustration { max-width: 420px; }
+  .error-text h1 { font-size: 2rem; }
+}

@@ -1,0 +1,26 @@
+{{ attach_library('sub_theme/service-slider') }}
+
+<div class="service-carousel-wrapper">
+  <div class="service-carousel">
+    {% for row in rows %}
+      {% set service = row.content['#row']._entity %}
+      <div class="service-card">
+        <div class="service-card-image">
+          {% if service.field_service_image.entity %}
+            <img src="{{ file_url(service.field_service_image.entity.uri.value) }}" alt="{{ service.title.value }}">
+          {% endif %}
+        </div>
+        <div class="service-card-content">
+          <h3>{{ service.title.value }}</h3>
+          <p>{{ service.body.value|raw }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Controls under carousel -->
+  <div class="service-controls">
+    <button class="service-prev">‹</button>
+    <button class="service-next">›</button>
+  </div>
+</div>

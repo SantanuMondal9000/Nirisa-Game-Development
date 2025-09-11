@@ -1,0 +1,57 @@
+{# themes/custom/your_subtheme/templates/page--403.html.twig #}
+{{ attach_library('sub_theme/error-pages') }}
+
+<!doctype html>
+<html lang="{{ language.getId() }}">
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ 'Access denied'|t }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+  </head>
+  <body class="error-page error-403">
+    <main class="error-wrap" role="main" aria-labelledby="error-heading">
+      <div class="error-content container">
+        <div class="error-visual" aria-hidden="true">
+          <svg class="error-illustration" viewBox="0 0 800 600" role="img" focusable="false">
+            <!-- a friendly lock/stop illustration -->
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0" stop-color="#ff9a9e"/>
+                <stop offset="1" stop-color="#fad0c4"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="800" height="600" fill="url(#g1)"/>
+            <g transform="translate(120,100)" fill="#fff" opacity="0.95">
+              <rect x="170" y="160" rx="16" ry="16" width="260" height="190"></rect>
+              <circle cx="300" cy="95" r="58"></circle>
+              <rect x="255" y="60" rx="6" ry="6" width="90" height="20" fill="#f4f4f4"></rect>
+            </g>
+          </svg>
+        </div>
+
+        <div class="error-text">
+          <h1 id="error-heading">403 — Access denied</h1>
+          <p class="lead">You don’t have permission to view this page. If you think this is a mistake, contact the site administrator.</p>
+
+          <div class="error-actions">
+            <a class="btn btn-primary" href="{{ path('<front>') }}" title="{{ 'Go to homepage'|t }}">Go to homepage</a>
+            <a class="btn btn-secondary" href="mailto:{{ site_mail ?: 'admin@example.com' }}" title="{{ 'Contact support'|t }}">Contact support</a>
+          </div>
+
+          <div class="error-hint">
+            <p>Tip: Try logging in or check if you followed the right link.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="error-footer" role="contentinfo">
+      <div class="container">
+        <small>&copy; {{ "now"|date("Y") }} {{ site_name }}</small>
+      </div>
+    </footer>
+
+    <js-bottom-placeholder token="{{ placeholder_token }}"></js-bottom-placeholder>
+  </body>
+</html>

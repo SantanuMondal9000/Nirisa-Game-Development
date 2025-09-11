@@ -66,7 +66,7 @@
         <button class="navbar-toggler custom-navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="{{ 'Toggle navigation'|t }}">
           <span class="navbar-toggler-icon"></span>
         </button>
-
+        
         {# Navigation Menu #}
         <div class="collapse navbar-collapse custom-navbar-menu" id="mainNavbar">
           {% if page.header.sub_theme_main_navigation %}
@@ -99,3 +99,10 @@
 
     </div>
   </main>
+{% if page.footer %}
+  <footer>
+    <div class="container">
+      {{ page.footer }}
+    </div>
+  </footer>
+{% endif %}

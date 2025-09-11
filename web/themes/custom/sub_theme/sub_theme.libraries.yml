@@ -39,3 +39,33 @@ swiper:
   dependencies:
     - core/drupal
     - core/jquery
+
+error-pages:
+  css:
+    theme:
+      css/error-pages.css: {}
+  js:
+    js/error-pages.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+service:
+  css:
+    theme:
+      css/service.css: {}
+
+service-slider:
+  css:
+    theme:
+      https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css: {}
+      https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css: {}
+      css/service-slick.css: {}
+  js:
+    https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js: {}
+    js/service-slick.js: {}
+  dependencies:
+    - core/jquery
+    - core/once
+    - core/drupal
+

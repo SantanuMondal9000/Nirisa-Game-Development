@@ -26,7 +26,9 @@
       once('bannerSwiperInit', '.swiper-container', context).forEach(function (element) {
         var swiper = new Swiper(element, {
           loop: true,
-          autoplay: { delay: 4000 },
+          autoplay: { delay: 3000
+           },
+          speed: 1000, 
           pagination: { el: '.swiper-pagination', clickable: true },
           navigation: {
             nextEl: '.swiper-button-next',
@@ -35,7 +37,7 @@
         });
 
         // Animate slide content on slide change
-        swiper.on('slideChangeTransitionStart', function () {
+        swiper.on('slideChangeTransitionEnd', function () {
           // remove animation from all slides
           element.querySelectorAll('.slide-content').forEach(function(el){
             el.classList.remove('slide-animate');
@@ -43,7 +45,9 @@
           // add animation to active slide
           var active = element.querySelector('.swiper-slide-active .slide-content');
           if(active){
-            active.classList.add('slide-animate');
+            setTimeout(function(){
+              active.classList.add('slide-animate');
+            }, 50); // delay in ms
           }
         });
 

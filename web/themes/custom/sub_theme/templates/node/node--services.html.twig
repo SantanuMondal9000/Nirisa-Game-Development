@@ -1,0 +1,29 @@
+{# Place this file inside your theme's templates/ folder as node--service.html.twig #}
+{{ attach_library('sub_theme/service') }}
+<article{{ attributes.addClass('nirisa-service', 'card') }}>
+<div class="nirisa-service__media">
+{% if node.field_service_image.entity %}
+  <div class="nirisa-service__img-wrap">
+    <img src="{{ file_url(node.field_service_image.entity.uri.value) }}" alt="{{ node.field_service_image.alt|default(node.title.value) }}">
+  </div>
+{% endif %}
+</div>
+
+
+<div class="nirisa-service__content">
+<header class="nirisa-service__header">
+<h2 class="nirisa-service__title">{{ label }}</h2>
+</header>
+
+
+<div class="nirisa-service__body">
+{{ content.body }}
+</div>
+
+
+<div class="nirisa-service__actions">
+{# Optional CTA button — uncomment if you have a field or link #}
+{# <a href="#" class="button nirisa-btn">Learn More</a> #}
+</div>
+</div>
+</article>
