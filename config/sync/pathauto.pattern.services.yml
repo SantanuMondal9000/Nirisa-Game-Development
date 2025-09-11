@@ -1,0 +1,22 @@
+uuid: 7d19380b-0508-4193-99e6-d2edf1a8d794
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: services
+label: services
+type: 'canonical_entities:node'
+pattern: '/services/[node:title]'
+selection_criteria:
+  3a4c87b6-a0d8-4f19-ace4-89767e76b17b:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 3a4c87b6-a0d8-4f19-ace4-89767e76b17b
+    context_mapping:
+      node: node
+    bundles:
+      services: services
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -4,11 +4,10 @@
   margin: 30px auto;
   text-align: center;
 }
-.service-carousel {
-   gap: 20px;
-}
+
 /* Card Styling */
 .service-card {
+  margin: 0 10px;
   background: #fff;
   border-radius: 16px;
   overflow: hidden;
@@ -25,7 +24,7 @@
 
 /* Image = 70% height */
 .service-card-image {
-  flex: 0 0 40%;
+  /* flex: 0 0 40%; */
   overflow: hidden;
 }
 .service-card-image img {
@@ -36,7 +35,7 @@
 
 /* Content = 30% height */
 .service-card-content {
-  flex: 0 0 30%;
+  /* flex: 0 0 30%; */
   padding: 1rem;
   text-align: left;
   background-color: rgb(1, 48, 80);
